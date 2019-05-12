@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-class VobelCount{
+class VowelCount{
 	public static void main(String[] args) {
 		String str = "";
 		Scanner s = new Scanner(System.in);
@@ -17,6 +17,6 @@ class VobelCount{
 			if(ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' || ch == 'o' || ch =='O' || ch == 'I' || ch == 'u' || ch == 'U')
 							count++;
 		}
-		System.out.println(count + " vobel present in " + str);
+		System.out.println(count + " vowel present in " + str);
 	}
 }
