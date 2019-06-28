@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <bean class = "com.ibm.training.BankAppWithSpring.ServiceClass" id = "srvce1">
+  <!--   <property name="dao" ref="dao"></property> -->
+    </bean>
+    
+    <bean class ="com.ibm.training.BankAppWithSpring.DaoClass" id= "dao">
+    	<property name = "customers">
+    	
+    	<list>
+    		<ref bean = "cust1"></ref>
+    		<ref bean = "cust2"></ref>
+    		<ref bean = "cust3"></ref>
+    	</list>
+    	
+    	</property>
+    </bean>
+    
+    <bean class = "com.ibm.training.BankAppWithSpring.Customer" id = "cust1">
+		<property name="account_no" value = "1234"></property>   
+		<property name="customer_name" value = "Apurva"></property>  
+		<property name="balance" value = "50000"></property>   
+    </bean>
+    
+     <bean class = "com.ibm.training.BankAppWithSpring.Customer" id = "cust2">
+		<property name="account_no" value = "4567"></property>   
+		<property name="customer_name" value = "Divya"></property>  
+		<property name="balance" value = "50000"></property>   
+
+    </bean>
+    
+     <bean class = "com.ibm.training.BankAppWithSpring.Customer" id = "cust3">
+		<property name="account_no" value = "8910"></property>   
+		<property name="customer_name" value = "Shivani"></property>  
+		<property name="balance" value = "50000"></property>   
+    
+     </bean>
+     
+     <context:annotation-config/> 
+     
+    </beans>
